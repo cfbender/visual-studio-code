@@ -1,7 +1,7 @@
 name: Dracula
 author: Zeno Rocha
 maintainers:
-  - Derek P Sifford <dereksifford@gmail.com>
+  - Cody Bender <codyfbender@gmail.com>
 semanticClass: theme.dracula
 semanticHighlighting: true
 dracula:
@@ -728,6 +728,7 @@ tokenColors:
     - punctuation.definition.keyword
     settings:
       foreground: *PINK
+      fontStyle: italic
 
   - name: Keyword "new"
     scope:
@@ -877,7 +878,7 @@ tokenColors:
     - meta.interface-or-protocol storage.type.objc
     - source.groovy storage.type.def
     settings:
-      fontStyle: regular
+      fontStyle: italic
       foreground: *PINK
 
   - name: Types
