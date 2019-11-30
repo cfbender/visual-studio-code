@@ -20,5 +20,5 @@ module.exports = async () => {
 };
 
 if (require.main === module) {
-    module.exports();
+    module.exports = {};
 }
