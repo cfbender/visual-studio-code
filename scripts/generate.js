@@ -13,7 +13,7 @@ const tinycolor = require('tinycolor2');
 
 /**
  * @typedef {Object} Theme - Parsed theme object.
- * @prop {Record<'base'|'ansi'|'brightOther'|'other', string[]>} dracula - Dracula color variables.
+ * @prop {Record<'italic'|'ansi'|'brightOther'|'other', string[]>} dracula - Dracula color variables.
  * @prop {Record<string, string|null|undefined>} colors - VSCode color mapping.
  * @prop {TokenColor[]} tokenColors - Textmate token colors.
  */
@@ -59,17 +59,17 @@ module.exports = async () => {
     );
 
     /** @type {Theme} */
-    const base = load(yamlFile, { schema });
+    const italic = load(yamlFile, { schema });
 
     // Remove nulls and other falsey values from colors
-    for (const key of Object.keys(base.colors)) {
-        if (!base.colors[key]) {
-            delete base.colors[key];
+    for (const key of Object.keys(italic.colors)) {
+        if (!italic.colors[key]) {
+            delete italic.colors[key];
         }
     }
 
     return {
-        base,
-        soft: transformSoft(yamlFile, base),
+        italic,
+        softItalic: transformSoft(yamlFile, italic),
     };
 };

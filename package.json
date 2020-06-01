@@ -7,11 +7,11 @@
     "publisher": "cfbender",
     "license": "MIT",
     "scripts": {
-        "dev": "node ./scripts/dev.js",
         "build": "node ./scripts/build.js",
         "lint": "node ./scripts/lint.js",
         "package": "vsce package -o ./bin/dracula.vsix",
-        "vscode:prepublish": "npm run build"
+        "vscode:prepublish": "npm run build",
+        "vsce-publish": "vsce publish"
     },
     "maintainers": [
         "Cody Bender <codyfbender@gmail.com>"
@@ -61,9 +61,9 @@
     },
     "devDependencies": {
         "js-yaml": "^3.13.1",
-        "prettier": "^1.17.0",
+        "prettier": "^1.19.1",
         "tinycolor2": "^1.4.1",
-		"vsce": "^1.74.0"
+        "vsce": "^1.71.0"
     },
     "__metadata": {
         "id": "4e44877c-1c8d-4f9c-ba86-1372d0fbeeb1",
